@@ -2,7 +2,7 @@ import React from "react";
 import { Dimensions, Image, StyleSheet, Text, View } from "react-native";
 import topo from '../../../assets/topo.png'
 import logo from '../../../assets/logo.png'
-import icon from '../../../assets/icon.png'
+import cesta from '../../../assets/cesta.png'
 
 const width = Dimensions.get('screen').width;
 
@@ -11,17 +11,16 @@ export default function Padaria(){
  <Image source={topo} style ={estilos.topo}/>
  <Text style={estilos.titulo}> Detalhes da Padaria</Text>
  <View style = {estilos.padaria}>
-   <Text style={estilos.nome}></Text>
+   <Text style={estilos.nome}>Padaria carrinho</Text>
 
-<View style={estilos.icon}>
- <Image style={estilos.imagemdacesta} source={logo}></Image>
- <Text style={estilos.nome}>Padaria feliz, Lençóis Paulista</Text>
+<View style={estilos.cestaa}>
+ <Image style={estilos.imagemdacesta} source={cesta}></Image>
+ <Text style={estilos.nomecesta}>Padaria feliz, Lençóis Paulista</Text>
 </View>
-<Text>Padaria(carrinho)</Text>
-<Text>Venha conhecer nossa caixinha de delicias, escolhidas a dedo para
+<Text style={estilos.descricao}>Venha conhecer nossa caixinha de delicias, escolhidas a dedo para
   seu maravilhoso café da manhã
 </Text>
-<Text>R$ 35,60</Text>
+<Text style={estilos.preco}>R$ 35,60</Text>
 </View>
 </>
 }
@@ -38,27 +37,45 @@ const estilos = StyleSheet.create({
     textAlign:"center",
     fontSize: 24,
     lineHeight: 26,
-    fontWeight: "bold",
-    padding: 16
+    padding: 16,
+    fontFamily: "MontserratBold"
   },
   padaria: {
     paddingVertical: 8,
     paddingHorizontal: 16
 
   },
+
+  nome: {
+  fontSize: 26,
+  lineHeight: 42,
+  color: "#464646",
+  fontFamily: "MontserratBold"
+  },
+  cestaa:{
+    flexDirection: "row",
+    paddingVertical: 12
+  },
   imagemdacesta: {
     width: 32,
     height: 32
   },
-  nome: {
-    fontSize: 16,
-    fontFamily:"MontserratBold",
-    lineHeight: 26,
-    marginLeft: 12
+nomecesta:{
+fontSize: 16,
+fontFamily: "MontserratBold",
+lineHeight: 26,
+marginLeft:12
+},
+
+  descricao:{
+    color: "#A3A3A3",
+    fontFamily: "MontserratItalic"
   },
-  icon:{
-    width: "100%",
-    height: 578/ 768 * width,
+  preco:{
+    fontSize: 26,
+    fontFamily: "MontserratRegular",
+    color: "#2A9F85",
+    marginTop: 8,
   }
 
 
