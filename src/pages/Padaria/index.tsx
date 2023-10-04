@@ -17,10 +17,11 @@ export default function Padaria(){
  <Image style={estilos.imagemdacesta} source={cesta}></Image>
  <Text style={estilos.nomecesta}>Padaria feliz, Lençóis Paulista</Text>
 </View>
-<Text style={estilos.descricao}>Venha conhecer nossa caixinha de delicias, escolhidas a dedo para
+<Text>Padarinha cesta</Text>
+<Text>Venha conhecer nossa caixinha de delicias, escolhidas a dedo para
   seu maravilhoso café da manhã
 </Text>
-<Text style={estilos.preco}>R$ 35,60</Text>
+<Text>R$ 35,60</Text>
 </View>
 </>
 }
